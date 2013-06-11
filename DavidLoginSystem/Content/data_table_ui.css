@@ -1,0 +1,213 @@
+﻿/* table -------------------------------------*/
+table.datatables{ border-collapse:collapse; border-bottom:1px solid #C2C2C2; table-layout:fixed; font-family:Lucida Grande, Arial, Lucida, Verdana, Helvetica, Sans-Serif;}
+table.datatables thead th{ border:none; border-top:1px solid #C2C2C2; border-bottom:1px solid #C2C2C2; background:#f5f5f5; font-weight:normal;}
+table.datatables th, table.datatables td{text-align:left;}
+table.datatables th{ padding:0 3px; }
+table.datatables td{ padding:0 5px; border-left:1px solid #E6E6E6;}
+table.datatables td a{ padding:0; margin:0 2px; color:#3182bf;}
+table.datatables tr:hover td{ background-color:#DFEEF2;}
+table.datatables td.first{ border-left:none;}
+
+.ellipsis:not(p) {clear: both;}  
+.ellipsis:not(p) a {max-width: 300px;float: left;}  
+.ellipsis:not(p):after {content: "...";float: left;width: 25px;padding-left: 1px;} 
+
+table.datatables thead tr{ height:38px;}
+table.datatables tr{ height:30px;}
+
+table tr.even{ background:#f5f5f5;}
+table tr.odd{ background:#fff;}
+table tfoot td{ font-weight:bold;}
+
+table.datatables .ui-state-default{ color:#666; border-left:none; border-right:none;}
+table.datatables thead .sort{ cursor:pointer;}
+table.datatables thead th.sort:hover .ui-icon{ background:url("images/ui-icons_ef8c08_256x240.gif") -64px -16px no-repeat;}
+
+table.datatables .tdleft{ text-align: left;}
+table.datatables .tdcenter{ text-align:center;}
+table.datatables .tdright{ text-align:right;}
+
+table.datatables .fontweight{ font-weight:bolder; color:#333333}
+
+table.datatables .css_right{ float:left;}
+table.datatables .tdright .css_right{ float:right!important;}
+
+table.datatables button{ background:url(images/thbtnbg.png) left center repeat-x; border:1px solid #ccc; line-height:19px; cursor:pointer;}
+table.datatables button span{ background:url(images/arrow_down.gif) center no-repeat; width:7px; height:19px; display:inline-block; vertical-align:middle; margin-left:2px;}
+
+table.datatables h4{ line-height:30px; font-weight:normal; font-size:12px;}
+
+.dataTables_wrapper{ position:static!important;}
+
+.bottom{ padding:0;}
+
+.dataTables_length, .dataTables_info{ display:inline;}
+.dataTables_info{ margin-right:10px;}
+.dataTables_paginate{ float:right;}
+
+.dataTables_length select{ width:50px;}
+
+.dataTables_paginate .first, .dataTables_paginate .previous, .dataTables_paginate .next, .dataTables_paginate .last{ width:18px; height:18px; border:none; vertical-align:middle; display:inline-block; *display:inline; *zoom:1; margin:0 1px;}
+.dataTables_paginate .first{ background:url(images/arrow_first.gif) 0 0 no-repeat;}
+.dataTables_paginate .previous{ background:url(images/arrow_prev.gif) -0 0 no-repeat;}
+.dataTables_paginate .next{ background:url(images/arrow_next.gif) -0 0 no-repeat;}
+.dataTables_paginate .last{ background:url(images/arrow_last.gif) 0 0 no-repeat;}
+
+.dataTables_paginate .ui-state-disabled{ background-position:left bottom;}
+
+.dataTables_paginate .fg-button{ cursor:pointer;}
+.dataTables_paginate span span.fg-button{ padding:0 3px; margin:0 1px; vertical-align:middle; background:none; background-color:#fff; color:#666;}
+.dataTables_paginate span span.ui-state-disabled{ color:#ccc;}
+
+.dataTables_empty{ border-left:none!important;}
+.dataTables_wrapper { position: relative; min-height: 30; clear: both; zoom: 1; /* Feeling sorry for IE */}
+.dataTables_processing { text-align: center; color: #555; font-size: 14px; background:url(images/loading30.gif) center 41px no-repeat #fff;}
+
+/* multi */
+.multirow tbody tr{ height:60px; background-color:#fff;}
+.multirow tbody td{ border-top:1px solid #E6E6E6;}
+.multirow tbody tr:hover .tdbg{ background-color:#DFEEF2;}
+.multirow .rate{ text-align:center; width:50px; font-size:10px; margin-left:40px; line-height:10px;}
+.multirow .title{ background-color:#f5f5f5;}
+.multirow h4{ line-height:30px; font-weight:normal; font-size:12px; padding:0 5px;}
+.multirow .tdbg{ background-color:#F0F5FB;}
+
+.nowrap{ overflow:hidden; white-space:nowrap; word-break: keep-all; text-overflow:ellipsis;}
+tbody td.nowrap a{ width:94%; display:inline-block; *display:inline; *zoom:1; overflow:hidden; white-space:nowrap; word-break: keep-all; *text-overflow:ellipsis}
+/*tbody td.nowrap:after{ content:"...";}*/
+
+/* datatable in layer */
+table.selectdata{ border-collapse:collapse; table-layout:fixed; font-family:Lucida Grande, Arial, Lucida, Verdana, Helvetica, Sans-Serif; background-color:#fff; border:1px solid #ddd; width:100%;}
+table.selectdata thead th{ border:none!important; background:none!important; font-weight:normal;}
+table.selectdata th, table.selectdata td{ padding:0 5px; text-align:left;}
+table.selectdata td{ border-top:1px solid #E6E6E6; background:#fff; overflow:hidden; white-space:nowrap; word-break: keep-all; text-overflow:ellipsis;}
+table.selectdata tr{ height:30px;}
+
+table.selectdata .ui-state-default{ color:#666;}
+table.selectdata thead .sort{ cursor:pointer;}
+table.selectdata thead th.sort:hover .ui-icon{ background:url("images/ui-icons_ef8c08_256x240.gif") -64px -16px no-repeat;}
+table.selectdata .css_right{ float:left;}
+table.selectdata .tdright{ text-align:right;}
+table.selectdata .tdright .css_right{ float:right!important;}
+
+table.bedata{border-collapse:collapse; table-layout:fixed; font-family:Lucida Grande, Arial, Lucida, Verdana, Helvetica, Sans-Serif; background-color:#fff; width:100%;}
+table.bedata thead th{ border:none!important; background:none!important; font-weight:normal;}
+table.bedata th, table.bedata td{ padding:0 5px; text-align:left;}
+table.bedata td{ background:#fff; overflow:hidden; white-space:nowrap; word-break: keep-all; text-overflow:ellipsis;}
+table.bedata tr{ height:25px;}
+
+/* tab -------------------------------------*/
+.tabPages div{ background:none; border:none;}
+.tabPages ul{ background:none; border:none;}
+.tabPages ul li{ border:1px solid #ccc; margin:0 1px 0 0!important;}
+.tabPages ul li a{ color:#666!important; font-weight:normal; outline:none;}
+.tabPages .ui-state-active{ background:#fff!important; border:2px solid #333!important; border-bottom:0px; z-index:10;}
+.tabPages .ui-state-active a{ color:#333; font-weight:bold!important;}
+
+.tabPages .ui-state-default{ background:none;}
+.tabPages .ui-state-hover{ border:1px solid #333;}
+.tabPages .ui-corner-top{-moz-border-radius:0!important;-webkit-border-radius:0!important;}
+
+.tabPages .ui-tabs-panel{ border-top:1px solid #333;}
+
+
+/* combobox -------------------------------------*/
+.combobox, .combobox .ui-widget{ display:inline-block; *display:inline; *zoom:1;}
+.combobox .ui-widget{ width:inherit;}
+.combobox .ui-corner-left, .combobox .ui-corner-right{-moz-border-radius:0; -webkit-border-radius:0;}
+.combobox .ui-widget-content{ border:none; background:url(images/txt.gif) left top repeat-x; height:21px; line-height:21px; border:1px solid #ccc; border-right:none;}
+.combobox .ui-autocomplete-input{ padding:0; padding-left:3px; vertical-align:middle; font-family:Arial; font-size:12px; width:123px;}
+.combobox .ui-button{ background:url(images/select.gif) center top no-repeat; border:none; width:23px; height:23px; margin-left:-2px; vertical-align:middle;}
+.combobox .ui-button .ui-icon{ background:none!important;}
+.combobox .ui-button .ui-button-text{ background:none; margin:0; padding:0;}
+.combobox .ui-widget .ui-state-hover{ background:url(images/select.gif) center top no-repeat!important;}
+.combobox select{display:none;}
+#com_txt28 input{ width:28px!important;}
+
+ul.ui-corner-all, ul .ui-corner-all{-moz-border-radius:0; -webkit-border-radius:0;}
+ul.ui-menu{ background:#fff; max-height:230px; height:auto!important; height:230px; overflow:hidden; overflow-y:auto; 
+            _height:expression(this.scrollHeight > 230 ? "230px" : "auto"); 
+            _overflow:expression(this.scrollHeight > 230 ? "":"hidden"); font-family:Arial; }
+ul.ui-menu .ui-menu-item a{ margin:0;}
+ul.ui-menu .ui-menu-item a.ui-state-hover{ background:#f5f5f5; border:none; color:#333; margin:0!important; cursor:pointer;}
+
+.cbdisabled .ui-widget-content{ background:url(images/txtdisabled.gif) left -33px repeat-x!important;}
+.cbdisabled .ui-button{ background:url(images/sdisabled.gif) center top no-repeat;}
+.cbdisabled .ui-widget .ui-state-hover{ background:url(images/sdisabled.gif) center top no-repeat!important;}
+
+
+/* dialog -------------------------------------*/
+.ui-widget{ font:12px Arial normal; }
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{ font-family:Arial;}
+.ui-widget-overlay{ opacity:0.3; background:#333;}
+.ui-widget-content{ color:#666;}
+.ui-tabs{ padding:0;}
+.ui-tabs .ui-tabs-panel { padding:0;}
+.ui-corner-all{-moz-border-radius:0!important; -webkit-border-radius:0!important;}
+.ui-dialog{ padding:0; font-family:Arial;}
+
+.ui-sortable-placeholder{ border: 1px dotted black; visibility: visible !important; height: 250px !important;}
+.ui-sortable-placeholder *{ visibility: hidden;}
+
+.coverlayer{ border:1px solid #333;}
+.coverlayer .ui-widget-header{ background:url(images/dialog_title_bg.gif) left top repeat-x!important; border:none; height:29px; padding:0; padding-left:10px;}
+.coverlayer .ui-dialog-title{ font:14px 微软雅黑; line-height:28px; margin:0; color:White;}
+.coverlayer .ui-dialog-titlebar .ui-dialog-titlebar-close{ border:none; padding:1px;}
+.coverlayer .ui-state-hover{ background:none!important;}
+.coverlayer .ui-state-hover .ui-icon{ background-image:url("images/ui-icons_ffffff_256x240.gif"); cursor:pointer;}
+.coverlayer .ui-dialog-content{ background-color:#fff;}
+.coverlayer button.ui-state-hover{ background:url(images/select.gif) center top no-repeat!important;}
+
+/*.coverlayer .ui-widget-header {
+    background: url("../Images/dialog_title_bg.gif") repeat-x scroll left top transparent !important;
+    border: medium none;
+    height: 29px;
+    padding: 0 0 0 10px;
+}*/
+
+.winform{ background:#eee;}
+.winform .ui-widget-header{ border:none; height:32px; padding:0 10px;}
+.winform .ui-dialog-titlebar .ui-dialog-title{ color:#333; font:12px normal; line-height:32px; margin:0;}
+.winform .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon{ border:none; background:url(images/tab_close.gif) left top no-repeat;}
+.winform .ui-dialog-titlebar .ui-state-hover{ background:none!important; border:none;}
+.winform .ui-dialog-content{ padding:0; min-height:50px!important;}
+.winform input{ font-family:Arial;}
+.notitle .ui-dialog-titlebar{ display:none;}
+
+.wbtngroup{ position:absolute; z-index:2; margin-top:-32px;}
+
+/*  combobox 2  -------------------------------------*/
+.excombobox, .excombobox .ui-button, .excomboboc .ui-tabs{ height:23px; line-height:23px;}
+.excombobox .ui-corner-all, .excombobox .ui-corner-top{-moz-border-radius:0; -webkit-border-radius:0;}
+.excombobox .ui-widget-content, .excombobox .ui-tabs .ui-tabs-nav{ background:none; border:none; padding:0;}
+
+.excombobox{ background:url(images/txt.gif) left top repeat-x; border:1px solid #ccc; width:200px; min-width:200px; width:auto!important; min-height:23px;height:auto!important; padding-bottom:1px; padding-top:1px;}
+.excombobox .ui-button{ float:right; border:none; background:url(images/arrow.gif) right top no-repeat; margin:0 5px 0 0; z-index:1000;}
+.excombobox .ui-button-text{ padding:0 1em; line-height:23px; text-decoration:underline; cursor:pointer; color:#3183BF;}
+
+.excombobox .ui-tabs{ margin:2px 2px 0 2px;  _margin:2px;}
+.excombobox .ui-tabs .ui-tabs-nav li{ background:#FEFAF5; border:1px solid #FBD2AE!important; padding:0; top:0; white-space:nowrap; height:17px;}
+.excombobox .ui-tabs .ui-tabs-nav li a{ padding:0 3px!important; font-weight:normal; line-height:17px; color:#666; margin:0; float:none; vertical-align:middle;}
+.excombobox .ui-tabs .ui-tabs-nav .ui-icon-close{ margin:0!important; background:url(images/tab_close.gif); cursor: pointer; display:inline-block; *display:inline; *zoom:1; vertical-align:middle;}
+.excombobox .ui-tabs .ui-state-hover{ background:#FEFAF5!important;}
+.excombobox .ui-tabs .ui-state-hover .ui-icon-close{ margin:0!important; background:url(images/tab_close.gif)!important;}
+
+/* combobox dialog */
+.excombobox_dialog { border:1px solid #ccc; overflow:hidden;}
+.excombobox_dialog .ui-dialog-titlebar{display:none;}
+.excombobox_dialog .ui-dialog-content{ overflow:hidden; overflow-y:auto; background:#fff;}
+.excombobox_dialog .ui-dialog-content .close{ background:url(images/tab_close.gif); display:inline-block; float:right; width:16px; height:16px; cursor:pointer;}
+.excombobox_dialog .ui-dialog-content a{ color:#3183BF; outline:none; text-decoration:none;}
+.excombobox_dialog .ui-dialog-content table td, .excombobox_dialog .ui-dialog-content table th{ padding:0 10px 5px 0;}
+
+
+/* tree -------------------------------------*/
+.tree-apple{ overflow:visible!important; height:auto!important;}
+.tree-apple ul li{ padding:1px 0 1px 15px; line-height:18px;}
+.tree-apple ul li a ins{ background:none!important; display:none;}
+.tree-apple > .ltr > li{ display:block!important;}
+.tree-apple ul li a{ padding:1px 3px; line-height:18px;}
+.tree-apple a.clicked{ background-color:#DFEEF2!important; border:none!important; color:#000!important; padding:1px 3px!important;}
+
+.tree-apple li.open{ background-position:-32px -46px!important;}
+.tree-apple li.closed{ background-position:-48px -30px!important;}

@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    @Html.Partial("Include")
+</head>
+<body>
+    <div id="loginArea" align="center" class="loginTableCss">
+        <table>
+            <tr>
+                <td style="width: 30%">
+                    @Html.Label("用户名：")
+                </td>
+                <td style="width: 7 0%">
+                    @Html.TextBox("txtLoginName", string.Empty, new { id = "txtLoginName", maxlength = 20 })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("密码：")
+                </td>
+                <td>
+                    @Html.TextBox("txtPassword", string.Empty, new { id = "txtPassword", maxlength = 20, type = "password" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.Label("验证码：")
+                </td>
+                <td>
+                    @Html.TextBox("txtVerifyCode", string.Empty, new { id = "txtVerifyCode", maxlength = 4 })
+                    <img id="codeImg" src="/Home/NewCheckCode" alt="图片加载失败..." style="margin-right: 3px;
+                        cursor: pointer;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" onclick="login()" value="登录" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <span id="loginMessage"></span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script language="javascript" type="text/javascript">
+
+        $(function () {
+            $("#codeImg").bind("click", function () {
+                var imgSrc = $("#codeImg");
+                var src = imgSrc.attr("src");
+                imgSrc.attr("src", chgUrl(src));
+                //时间戳   
+                //为了使每次生成图片不一致，即不让浏览器读缓存，所以需要加上时间戳   
+                function chgUrl(url) {
+                    var timestamp = (new Date()).valueOf();
+                    urlurl = url.substring(0, 21);
+                    if ((url.indexOf("?") >= 0)) {
+                        urlurl = url + "&t=" + timestamp;
+                    } else {
+                        urlurl = url + "?t=" + timestamp;
+                    }
+                    return urlurl;
+                }
+            });
+
+            //注册回车事件
+            $(document).keydown(function (event) {
+                if (event.keyCode == 13) { 
+                    login()  
+                }
+            })
+        })
+
+        //用户登录
+        var login = function () {
+            $("#loginMessage").css("color", "black");
+            $("#loginMessage").html("登录中...");
+            setTimeout(function () {
+                $.ajax({
+                    type: "post",
+                    dataType: "json",
+                    url: "/Home/LoginIn",
+                    data: { username: $("#txtLoginName").val(), password: $("#txtPassword").val(), code: $("#txtVerifyCode").val() },
+                    success: function (result) {
+                        $("#codeImg").click();
+                        if (result.flag == 1) {
+                            $("#loginMessage").html("");
+                            window.location.href = "/Home/Index";
+                        } else {
+                            $("#loginMessage").css("color", "red");
+                            $("#loginMessage").html(result.msg);
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        alert(textStatus);
+                    }
+                });
+            }, 1000)
+        }
+    </script>
+</body>
+</html>

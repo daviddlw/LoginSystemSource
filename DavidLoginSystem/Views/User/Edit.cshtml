@@ -1,0 +1,75 @@
+﻿@model DavidLoginSystem.Models.User
+@{
+    ViewBag.Title = Model.Id == 0 ? "新建页面" : "编辑页面";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string title = Model.Id == 0 ? "新建用户" : "编辑用户";
+    string now = DateTime.Now.ToString("yyyy-MM-dd");
+    string createTime = Model.CreateTime.HasValue ? Model.CreateTime.Value.ToString("yyyy-MM-dd") : now;
+    string lastChanged = Model.LastChanged.HasValue ? Model.LastChanged.Value.ToString("yyyy-MM-dd") : now;
+}
+<h2>
+    @title</h2>
+@Html.Label(ViewData["error"] == null ? string.Empty : ViewData["error"].ToString())
+@using (Html.BeginForm("EditUser", "User", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>@title</legend>
+        @Html.HiddenFor(model => model.Id)
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserName)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.UserName)
+            @Html.ValidationMessageFor(model => model.UserName)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @if (Model.Id == 0)
+                    {
+                @Html.TextBoxFor(model => model.Password)
+                    }
+                    else
+                    { 
+                @Html.EditorFor(model => model.Password)
+                    }
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+        @*        <div class="editor-label">
+            @Html.LabelFor(model => model.Password2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password2)
+            @Html.ValidationMessageFor(model => model.Password2)
+        </div>*@
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreateTime)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => createTime, new { onclick = "WdatePicker(dateFmt='yyyy-MM-dd')" })
+            @Html.ValidationMessageFor(model => model.CreateTime)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastChanged)
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(model => lastChanged, new { onclick = "WdatePicker(dateFmt='yyyy-MM-dd')" })
+            @Html.ValidationMessageFor(model => model.LastChanged)
+        </div>
+        <p>
+            <input type="submit" value="保存" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("返回列表", "Index")
+</div>

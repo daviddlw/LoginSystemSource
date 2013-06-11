@@ -1,0 +1,48 @@
+﻿@model DavidLoginSystem.Models.User
+
+@{
+    ViewBag.Title = "详情页面";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>用户详情</title>
+</head>
+<body>
+    <fieldset>
+        <legend>用户详情</legend>
+    
+        <div class="display-label">@Html.LabelFor(n=>n.UserName)</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.UserName)
+        </div>
+    
+        <div class="display-label">@Html.LabelFor(n=>n.Password)</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Password)
+        </div>
+    
+        <div class="display-label">@Html.LabelFor(n=>n.Email)</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    
+        <div class="display-label">@Html.LabelFor(n=>n.CreateTime)</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.CreateTime)
+        </div>
+    
+        <div class="display-label">@Html.LabelFor(n=>n.LastChanged)</div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastChanged)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("编辑", "Edit", new { id=Model.Id }) |
+        @Html.ActionLink("返回列表", "Index")
+    </p>
+</body>
+</html>
